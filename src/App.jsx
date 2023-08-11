@@ -1,18 +1,14 @@
-import { useState } from 'react';;
-import './styles/index.css'
+import "./styles/index.css";
 
 
-import { Gimoji } from './Gimoji';
-
+import { Gimoji } from "./Gimoji";
 
 function App() {
-
-
   return (
     <>
       <Gimoji />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
