@@ -1,10 +1,15 @@
 
 
-const Serch = () => {
+const Serch = ({onchangeBySerch}) => {
+  
     return (
         <div className="col-sm-6 ">
         <div>
-          <input type="serch" placeholder="serch" />
+          <input 
+          type="serch" 
+          placeholder="serch"
+onChange={(e)=>onchangeBySerch(e)}
+          />
           <span class="bottom"></span>
           <span class="right"></span>
           <span class="top"></span>

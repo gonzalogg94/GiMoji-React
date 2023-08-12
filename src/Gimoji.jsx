@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Header/Navbar";
+import Navbar from "./components/Header/Navbar";
 import Select from "./components/ui/Select";
 import Banner from "./components/Banner";
 import "./styles/style.css";
@@ -39,6 +39,12 @@ export const Gimoji = () => {
     console.log(e.target.value);
     setSerch(e.target.value);
   };
+  const onchangeBySerch=(e)=>{
+    const data=e.target.value;
+    if (data.length>=3){
+      setSerch(e.target.value)
+    }
+  }
 
   return (
     <>
@@ -47,6 +53,8 @@ export const Gimoji = () => {
       <Select
         categoriesdata={categories}
         onchangebycategory={(e) => onchangebycategory(e)}
+        onchangeBySerch={(e)=>onchangeBySerch(e)}
+        
       ></Select>
       <div className="album py-5 container">
         <div className="row">

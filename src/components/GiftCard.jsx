@@ -4,7 +4,7 @@ const GiftCard = ({ gift }) => {
   return (
     <>
       {gift.map((gift) => (
-        <div className="col-lg-3 col-md-4 col-sm-1    pb-3">
+        <div key={gift.id} className="col-lg-3 col-md-4 col-sm-1    pb-3">
           <div>
             <div className="card shadow-sm">
               <img
